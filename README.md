@@ -115,6 +115,7 @@ You can position the pop-up using the following gravity options: (upperCase and 
 
 ### Pop-Up with Animation and Position
 
+https://github.com/user-attachments/assets/33b8bda1-2cce-46b2-8370-ca69682e0547
 
 https://github.com/user-attachments/assets/a71266db-5047-4bdf-acde-ade6464ebb90
 
