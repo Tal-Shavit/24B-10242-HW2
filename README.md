@@ -7,16 +7,7 @@ Welcome to the Custom Pop-Up Library! This library allows developers to easily c
 - **Width & Height:** Easily adjust the width and height of the pop-up to fit your needs.
 ### 2. Background Customization
 - **Solid Color Background:** Change the background color of the pop-up to any solid color.  
-- **Gradient Background:** Apply a gradient background with multiple customization options for a more dynamic look using GradientDrawable.Orientation.  
-You can choose from the following types:  
-GradientDrawable.Orientation.BL_TR (Bottom-Left to Top-Right)  
-GradientDrawable.Orientation.BOTTOM_TOP (Bottom to Top)  
-GradientDrawable.Orientation.BR_TL (Bottom-Right to Top-Left)  
-GradientDrawable.Orientation.LEFT_RIGHT (Left to Right)  
-GradientDrawable.Orientation.RIGHT_LEFT (Right to Left)  
-GradientDrawable.Orientation.TL_BR (Top-Left to Bottom-Right)  
-GradientDrawable.Orientation.TOP_BOTTOM (Top to Bottom)  
-GradientDrawable.Orientation.TR_BL (Top-Right to Bottom-Left)  
+- **Gradient Background:** Apply a gradient background with multiple customization options for a more dynamic look.
 ### 3. Border Customization
 - **Add Border:** Option to add a border around the pop-up.  
 - **Border Thickness:** Choose the thickness of the border to match your design preferences.
@@ -68,7 +59,41 @@ customPopup.show(customView, "center", "scale");
 customPopup.show(customView);
 ```
 
-In this example, customView contains the layout that the developer using the library has prepared. They can then apply the various customization functions to it as needed.
+In this example, customView contains the layout that the developer using the library has prepared. They can then apply the various customization functions to it as needed. For gradient backgrounds, use GradientDrawable.Orientation to specify the direction of the gradient. Use the provided gravity and animation options to position and animate the pop-up.
+
+### Gradient Orientation
+using GradientDrawable.Orientation.  
+You can choose from the following types:
+
+**GradientDrawable.Orientation.BL_TR** (Bottom-Left to Top-Right)    
+**GradientDrawable.Orientation.BOTTOM_TOP** (Bottom to Top)  
+**GradientDrawable.Orientation.BR_TL** (Bottom-Right to Top-Left)  
+**GradientDrawable.Orientation.LEFT_RIGHT** (Left to Right)  
+**GradientDrawable.Orientation.RIGHT_LEFT** (Right to Left)  
+**GradientDrawable.Orientation.TL_BR** (Top-Left to Bottom-Right)  
+**GradientDrawable.Orientation.TOP_BOTTOM** (Top to Bottom)  
+**GradientDrawable.Orientation.TR_BL** (Top-Right to Bottom-Left) 
+
+### Animation Options
+You can choose from the following animation types: (upperCase and LowerCase) 
+
+**TOP:** Entrance from the top to the chosen position.  
+**BOTTOM:** Entrance from the bottom to the chosen position.  
+**LEFT:** Entrance from the left to the chosen position.  
+**RIGHT:** Entrance from the right to the chosen position.  
+**ROTATE:** Entrance with a rotation to the chosen position.  
+**ROTATE_SCALE** / **SCALE_ROTATE:** Entrance with a rotation and scaling from small to large to the chosen position.  
+**BOUNCE:** Appears in the chosen position with small bounces.  
+**SCALE:** Entrance from small to large to the chosen position.  
+**NONE:** Entrance to the chosen position without animation.  
+
+### position
+You can position the pop-up using the following gravity options: (upperCase and LowerCase)  
+
+**TOP:** Entrance from the top to the chosen position.  
+**BOTTOM:** Entrance from the bottom to the chosen position.  
+**CENTER:** Entrance from the left to the chosen position.  
+
 
 
 https://github.com/user-attachments/assets/a71266db-5047-4bdf-acde-ade6464ebb90
