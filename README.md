@@ -45,18 +45,18 @@ customPopup.changeHeight(1500);
 // Set both width and height
 customPopup.setPopUpSize(1000, 1500);
 // Set the corner radius
-// customPopup.setCornerRadius(90);
+customPopup.setCornerRadius(90);
 // Set the color and width of border
-// customPopup.setBorder(R.color.black, 4);
+customPopup.setBorder(R.color.black, 4);
 // Set solid color background
-// customPopup.setBackgroundOneColor(R.color.orange);
+customPopup.setBackgroundOneColor(R.color.orange);
 // Set gradient background - insert two colors and style
-// customPopup.setGradientBackgroundColor(R.color.lightOrange, R.color.lightBlue, GradientDrawable.Orientation.BOTTOM_TOP);
+customPopup.setGradientBackgroundColor(R.color.lightOrange, R.color.lightBlue, GradientDrawable.Orientation.BOTTOM_TOP);
 
 // Show the pop-up with position and custom animation
 customPopup.show(customView, "center", "scale");
 // Or simply show the pop-up in the center without animation
-// customPopup.show(customView);
+customPopup.show(customView);
 ```
 
 
