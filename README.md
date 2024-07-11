@@ -63,7 +63,7 @@ In this example, customView contains the layout that the developer using the lib
 
 ### Important Note
 
-❗ For changing the design of corners or borders, you must select a background first. ❗
+❗ For changing the design of corners or borders with a solid background, you must also set a border, even if the border width is 0. When using a gradient background, there are no such restrictions. ❗
 
 ### Gradient Orientation
 using GradientDrawable.Orientation.  
