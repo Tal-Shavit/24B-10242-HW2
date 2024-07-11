@@ -7,7 +7,16 @@ Welcome to the Custom Pop-Up Library! This library allows developers to easily c
 - **Width & Height:** Easily adjust the width and height of the pop-up to fit your needs.
 ### 2. Background Customization
 - **Solid Color Background:** Change the background color of the pop-up to any solid color.  
-- **Gradient Background:** Apply a gradient background with multiple customization options for a more dynamic look.
+- **Gradient Background:** Apply a gradient background with multiple customization options for a more dynamic look using GradientDrawable.Orientation.  
+You can choose from the following types:  
+GradientDrawable.Orientation.BL_TR (Bottom-Left to Top-Right)  
+GradientDrawable.Orientation.BOTTOM_TOP (Bottom to Top)  
+GradientDrawable.Orientation.BR_TL (Bottom-Right to Top-Left)  
+GradientDrawable.Orientation.LEFT_RIGHT (Left to Right)  
+GradientDrawable.Orientation.RIGHT_LEFT (Right to Left)  
+GradientDrawable.Orientation.TL_BR (Top-Left to Bottom-Right)  
+GradientDrawable.Orientation.TOP_BOTTOM (Top to Bottom)  
+GradientDrawable.Orientation.TR_BL (Top-Right to Bottom-Left)  
 ### 3. Border Customization
 - **Add Border:** Option to add a border around the pop-up.  
 - **Border Thickness:** Choose the thickness of the border to match your design preferences.
@@ -59,6 +68,7 @@ customPopup.show(customView, "center", "scale");
 customPopup.show(customView);
 ```
 
+In this example, customView contains the layout that the developer using the library has prepared. They can then apply the various customization functions to it as needed.
 
 
 https://github.com/user-attachments/assets/a71266db-5047-4bdf-acde-ade6464ebb90
