@@ -44,14 +44,14 @@ customPopup.changeWidth(1000);
 customPopup.changeHeight(1500);
 // Set both width and height
 customPopup.setPopUpSize(1000, 1500);
-// Set the corner radius
-customPopup.setCornerRadius(90);
-// Set the color and width of border
-customPopup.setBorder(R.color.black, 4);
 // Set solid color background
 customPopup.setBackgroundOneColor(R.color.orange);
 // Set gradient background - insert two colors and style
 customPopup.setGradientBackgroundColor(R.color.lightOrange, R.color.lightBlue, GradientDrawable.Orientation.BOTTOM_TOP);
+// Set the corner radius
+customPopup.setCornerRadius(90);
+// Set the color and width of border
+customPopup.setBorder(R.color.black, 4);
 
 // Show the pop-up with position and custom animation
 customPopup.show(customView, "center", "scale");
@@ -94,6 +94,26 @@ You can position the pop-up using the following gravity options: (upperCase and 
 **BOTTOM:** Entrance from the bottom to the chosen position.  
 **CENTER:** Entrance from the left to the chosen position.  
 
+## Examples
+ ### Regular Pop-Up
+
+
+### Pop-Up with Changed Width and Height
+
+
+### Pop-Up with Solid Color Background
+
+
+### Pop-Up with Gradient Background
+
+
+### Pop-Up with Rounded Corners
+
+
+### Pop-Up with Border
+
+
+### Pop-Up with Animation and Position
 
 
 https://github.com/user-attachments/assets/a71266db-5047-4bdf-acde-ade6464ebb90
