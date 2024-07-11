@@ -53,13 +53,13 @@ public class MainActivity extends AppCompatActivity {
             //customPopup.changeWidth(1000);
             //customPopup.changeHeight(1500);
             //customPopup.setPopUpSize(1000,1500);
+            //customPopup.setBackgroundOneColor(R.color.pink);
+            //customPopup.setGradientBackgroundColor(R.color.lightOrange, R.color.lightBlue, GradientDrawable.Orientation.BOTTOM_TOP);
             //customPopup.setCornerRadius(90);
             //customPopup.setBorder(R.color.black, 4);
-            //customPopup.setBackgroundOneColor(R.color.orange);
-            //customPopup.setGradientBackgroundColor(R.color.lightOrange, R.color.lightBlue, GradientDrawable.Orientation.BOTTOM_TOP);
             //customPopup.show(customView, "CENTER", "ROTATE_SCATE");
-            customPopup.show(view, "center", "scale");
 
+            customPopup.show(customView, "center", "none");
         });
     }
 
