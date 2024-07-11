@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PopupAnimation_Bottom">
+        <item name="android:windowEnterAnimation">@anim/popup_enter_from_bottom</item>
+    </style>
+    <style name="PopupAnimation_Top">
+        <item name="android:windowEnterAnimation">@anim/popup_enter_from_top</item>
+    </style>
+    <style name="PopupAnimation_Left">
+        <item name="android:windowEnterAnimation">@anim/popup_enter_from_left</item>
+    </style>
+    <style name="PopupAnimation_Right">
+        <item name="android:windowEnterAnimation">@anim/popup_enter_from_right</item>
+    </style>
+    <style name="PopupAnimation_Rotate">
+        <item name="android:windowEnterAnimation">@anim/popup_enter_rotate</item>
+    </style>
+    <style name="PopupAnimation_Scale">
+        <item name="android:windowEnterAnimation">@anim/popup_enter_scale</item>
+    </style>
+    <style name="PopupAnimation_Bounce">
+        <item name="android:windowEnterAnimation">@anim/popup_enter_bounce</item>
+    </style>
+    <style name="PopupAnimation_Rotate_Scale">
+        <item name="android:windowEnterAnimation">@anim/popup_enter_rotate_scale</item>
+    </style>
+   </resources>
