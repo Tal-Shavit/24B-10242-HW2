@@ -1,15 +1,20 @@
-package com.talshavit.a24b_10242_hw_2;
+package com.talshavit.popuplibrary;
 
 
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.LayerDrawable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 
@@ -50,20 +55,21 @@ public class CustomPopup extends PopupWindow {
         layout = contentView.findViewById(R.id.popupLayout);
         setWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
         setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
-        setFocusable(true);
         setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         backgroundDrawable = new GradientDrawable();
+        setFocusable(true);
+        setTouchable(true);
+        setInputMethodMode(INPUT_METHOD_NEEDED);
+        setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+
+        if (customView != null) {
+            customView.setBackground(backgroundDrawable);
+        }
     }
 
     public void setCustomView(View view) {
         this.customView = view;
         layout.addView(view);
-    }
-
-    public void addCustomView(View view) {
-        this.customView = view;
-        layout.addView(view);
-        customView.setBackground(backgroundDrawable);
     }
 
     public void changeWidth(int width) {
@@ -120,9 +126,18 @@ public class CustomPopup extends PopupWindow {
         }
     }
 
-    public void isFocusable(Boolean bool) {
-        customView.setFocusable(bool);
+    public void showKeyboard(View view) {
+        if (view.requestFocus()) {
+            InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.showSoftInput(view, InputMethodManager.SHOW_IMPLICIT);
+        }
     }
+
+    private void hideKeyboard(View view) {
+        InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    }
+
 
     public void show(View view) {
         showAtLocation(view, Gravity.CENTER, 0, 0);
@@ -146,6 +161,8 @@ public class CustomPopup extends PopupWindow {
         int animationStyle = getAnimationResource(animationType);
         setAnimationStyle(animationStyle);
         showAtLocation(view, gravity, 0, 0);
+
+        showKeyboard(customView);
     }
 
     private int getAnimationResource(String animationType) {
@@ -173,6 +190,7 @@ public class CustomPopup extends PopupWindow {
     }
 
     public void dismissPopup() {
+        hideKeyboard(contentView);
         dismiss();
     }
 }

@@ -4,10 +4,10 @@
     android:id="@+id/linear"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="10dp"
-    android:background="@color/white">
+    android:padding="10dp">
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="300dp"
@@ -69,25 +69,15 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:hint="border color"
-
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
             android:textColorHint="@color/black">
 
-            <Spinner
+            <AutoCompleteTextView
                 android:id="@+id/colorBorder"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                 />
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:id="@+id/colorBorder"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:drawableEnd="@drawable/baseline_arrow_drop_down_24"-->
-<!--                android:padding="5dp"-->
-<!--                android:inputType="none"-->
-<!--                android:focusable="false"-->
-<!--                android:clickable="true"-->
-<!--                android:text=" " />-->
-
+                android:inputType="none"
+                android:text=" " />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -114,26 +104,16 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:hint="change background one color"
+        android:hint="change background color"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
         android:textColorHint="@color/black">
 
-
-<!--        <com.google.android.material.textfield.TextInputEditText-->
-<!--            android:id="@+id/oneColor"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:drawableEnd="@drawable/baseline_arrow_drop_down_24"-->
-<!--            android:padding="5dp"-->
-<!--            android:inputType="none"-->
-<!--            android:focusable="false"-->
-<!--            android:clickable="true"-->
-<!--            android:text=" " />-->
-
-        <Spinner
+        <AutoCompleteTextView
             android:id="@+id/oneColor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            />
+            android:inputType="none"
+            android:text=" " />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -145,141 +125,54 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="0dp"
-            android:layout_height="50dp"
             android:layout_weight="1"
+            android:layout_height="match_parent"
             android:hint="color1"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
             android:textColorHint="@color/black">
 
-
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:id="@+id/gradientColor1"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:drawableEnd="@drawable/baseline_arrow_drop_down_24"-->
-<!--                android:padding="5dp"-->
-<!--                android:inputType="none"-->
-<!--                android:focusable="false"-->
-<!--                android:clickable="true"-->
-<!--                android:text=" " />-->
-
-            <Spinner
+            <AutoCompleteTextView
                 android:id="@+id/gradientColor1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                />
+                android:inputType="none"
+                android:text=" " />
 
 
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="0dp"
-            android:layout_height="50dp"
             android:layout_weight="1"
+            android:layout_height="match_parent"
             android:hint="color2"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
             android:textColorHint="@color/black">
 
-            <Spinner
+            <AutoCompleteTextView
                 android:id="@+id/gradientColor2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                />
-
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:id="@+id/gradientColor2"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:drawableEnd="@drawable/baseline_arrow_drop_down_24"-->
-<!--                android:padding="5dp"-->
-<!--                android:inputType="none"-->
-<!--                android:focusable="false"-->
-<!--                android:clickable="true"-->
-<!--                android:text=" " />-->
+                android:inputType="none"
+                android:text=" " />
 
 
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="0dp"
-            android:layout_height="50dp"
             android:layout_weight="1"
+            android:layout_height="match_parent"
             android:hint="orientation"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
             android:textColorHint="@color/black">
 
-
-            <Spinner
+            <AutoCompleteTextView
                 android:id="@+id/orientation"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                />
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:id="@+id/orientation"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:drawableEnd="@drawable/baseline_arrow_drop_down_24"-->
-<!--                android:padding="5dp"-->
-<!--                android:inputType="none"-->
-<!--                android:focusable="false"-->
-<!--                android:clickable="true"-->
-<!--                android:text=" " />-->
-
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="45dp"
-        android:orientation="horizontal">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:hint="Gravity"
-            android:textColorHint="@color/black">
-
-            <Spinner
-                android:id="@+id/gravity"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/spinner_bg"
-                />
-
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:id="@+id/gravity"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:drawableEnd="@drawable/baseline_arrow_drop_down_24"-->
-<!--                android:padding="5dp"-->
-<!--                android:inputType="none"-->
-<!--                android:focusable="false"-->
-<!--                android:clickable="true"-->
-<!--                android:text=" " />-->
-
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:hint="Animation"
-            android:textColorHint="@color/black">
-
-            <Spinner
-                android:id="@+id/animation"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                />
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:id="@+id/animation"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:drawableEnd="@drawable/baseline_arrow_drop_down_24"-->
-<!--                android:padding="5dp"-->
-<!--                android:inputType="none"-->
-<!--                android:focusable="false"-->
-<!--                android:clickable="true"-->
-<!--                android:text=" " />-->
+                android:inputType="none"
+                android:text=" " />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -290,17 +183,58 @@
         android:layout_height="50dp"
         android:orientation="horizontal">
 
-        <CheckBox
-            android:id="@+id/focuseCheckBox"
-            android:layout_width="30dp"
-            android:layout_height="30dp" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:hint="gravity"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:textColorHint="@color/black">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Focusable" />
+            <AutoCompleteTextView
+                android:id="@+id/gravity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="none"
+                android:text=" " />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:hint="animation"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:textColorHint="@color/black">
+
+            <AutoCompleteTextView
+                android:id="@+id/animation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="none"
+                android:text=" " />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <CheckBox-->
+<!--            android:id="@+id/focuseCheckBox"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="can touch outside" />-->
+
+<!--    </LinearLayout>-->
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/confirmButton"

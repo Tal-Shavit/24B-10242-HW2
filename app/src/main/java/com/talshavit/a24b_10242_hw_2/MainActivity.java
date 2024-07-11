@@ -1,50 +1,31 @@
 package com.talshavit.a24b_10242_hw_2;
 
-import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.LinearLayout;
-import android.widget.Spinner;
-import android.widget.TextView;
+import android.widget.AutoCompleteTextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.talshavit.popuplibrary.CustomPopup;
 
 public class MainActivity extends AppCompatActivity {
 
     private MaterialButton main_BTN_click, confirmButton;
     private CustomPopup customPopup;
     private TextInputEditText width, height, cornerRadius, borderWidth;
-    private CheckBox focuseCheckBox;
-    private Spinner colorBorder, oneColor, gradientColor1, gradientColor2, orientation, gravity, animation;
-
-    String oneColorStr, gradientColor1Str, gradientColor2Str, orientationStr, gravityStr, animationStr;
-    int borderColorId;
-    View customView;
-
-    private String[] colorOptions = {"NONE", "BLACK", "WHITE", "BLUE"};
-    private String[] gravityArr = {"NONE", "TOP", "BOTTOM", "CENTER"};
-    private String[] animArr = {"NONE", "TOP", "BOTTOM", "LEFT", "RIGHT", "ROTATE", "ROTATE_SCALE", "SCALE_ROTATE", "BOUNCE", "SCALE"};
+    private AutoCompleteTextView colorBorder, oneColor, gradientColor1, gradientColor2, orientation, gravity, animation;
+    private String oneColorStr, borderColorStr, gradientColor1Str, gradientColor2Str, orientationStr, gravityStr, animationStr;
+    private View customView;
+    private String[] colorOptions = {"BLACK", "WHITE", "BLUE", "ORANGE", "PINK", "PURPLE", "GREEN", "RED", "YELLOW", "LIGHTBLUE", "LIGHTORANGE"};
+    private String[] orientArr = {"TL_BR", "TL_BL", "BL_TR", "BR_TL", "TOP_BOTTOM", "BOTTOM_TOP", "LEFT_RIGHT", "RIGHT_LEFT"};
+    private String[] gravityArr = {"TOP", "BOTTOM", "CENTER"};
+    private String[] animArr = {"TOP", "BOTTOM", "LEFT", "RIGHT", "ROTATE", "ROTATE_SCALE", "SCALE_ROTATE", "BOUNCE", "SCALE"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,128 +43,91 @@ public class MainActivity extends AppCompatActivity {
             customView = inflater.inflate(R.layout.custom_content, null);
             findViewsCustom(customView);
 
-            ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, colorOptions);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            colorBorder.setAdapter(adapter);
-            oneColor.setAdapter(adapter);
-            gradientColor1.setAdapter(adapter);
-            gradientColor2.setAdapter(adapter);
-
-            List<String> ori = new ArrayList<>();
-            ori.add("tl_br");
-            ArrayAdapter<String> adapterOrientation = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, ori);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            orientation.setAdapter(adapterOrientation);
-
-            ArrayAdapter<String> adapterGravity = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, gravityArr);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            gravity.setAdapter(adapterGravity);
-
-            ArrayAdapter<String> adapterAnim = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, animArr);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            animation.setAdapter(adapterAnim);
-
-            colorBorder.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    borderColorId = getColorIdFromString(colorOptions[position]);
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> parent) {
-                    // Handle no selection
-                }
-            });
-
-            oneColor.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    oneColorStr = colorOptions[position];
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> parent) {
-                    // Handle no selection
-                }
-            });
-
-            gradientColor1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    gradientColor1Str = colorOptions[i];
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                }
-            });
-
-            gradientColor2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    gradientColor2Str = colorOptions[i];
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                }
-            });
-
-            orientation.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    orientationStr = ori.get(i);
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                }
-            });
-
-            gravity.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    gravityStr = gravityArr[i].trim();
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                }
-            });
-
-            animation.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    animationStr = animArr[i].trim();
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                }
-            });
-
-            confirmButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    updatePopupConditions();
-                }
-            });
+            initAllAdapters();
+            setOnItems();
+            onConfirmButton();
 
             customPopup.setCustomView(customView);
             //customPopup.setBackgroundOneColor(R.color.orange);
-            //customPopup.setCornerRadius(30);
+            //customPopup.setCornerRadius(90);
             //customPopup.setBorder(R.color.black, 4);
             //customPopup.setGradientBackgroundColor(R.color.lightOrange, R.color.lightBlue, GradientDrawable.Orientation.BOTTOM_TOP);
-            customPopup.setFocusable(false);
-
             customPopup.show(view, "center", "scale");
 
         });
+    }
+
+    private void onConfirmButton() {
+        confirmButton.setOnClickListener(view -> updatePopupConditions());
+    }
+
+    private void setOnItems() {
+        onBackgroungColor();
+        onBorderColor();
+        onGradientColor1();
+        onGradientColor2();
+        onOrientation();
+        onGravity();
+        onAnimation();
+    }
+
+    private void onAnimation() {
+        animation.setOnItemClickListener((adapterView, view, i, l) -> animationStr = animArr[i].trim());
+    }
+
+    private void onGravity() {
+        gravity.setOnItemClickListener((adapterView, view, i, l) -> gravityStr = gravityArr[i].trim());
+    }
+
+    private void onOrientation() {
+        orientation.setOnItemClickListener((adapterView, view, i, l) -> orientationStr = orientArr[i].trim());
+    }
+
+    private void onGradientColor2() {
+        gradientColor2.setOnItemClickListener((adapterView, view, i, l) -> {
+            gradientColor2Str = colorOptions[i].trim();
+            if (!"NONE".equals(gradientColor2Str)) {
+                oneColorStr = "NONE";
+            }
+        });
+    }
+
+    private void onGradientColor1() {
+        gradientColor1.setOnItemClickListener((adapterView, view, i, l) -> {
+            gradientColor1Str = colorOptions[i].trim();
+            if (!"NONE".equals(gradientColor1Str)) {
+                oneColorStr = "NONE";
+            }
+        });
+    }
+
+    private void onBorderColor() {
+        colorBorder.setOnItemClickListener((adapterView, view, i, l) -> borderColorStr = colorOptions[i].trim());
+    }
+
+    private void onBackgroungColor() {
+        oneColor.setOnItemClickListener((adapterView, view, i, l) -> {
+            oneColorStr = colorOptions[i].trim();
+            if (!"NONE".equals(oneColorStr)) {
+                gradientColor1Str = "NONE";
+                gradientColor2Str = "NONE";
+            }
+        });
+    }
+
+    private void initAllAdapters() {
+        initAdapter(colorBorder, colorOptions);
+        initAdapter(oneColor, colorOptions);
+        initAdapter(gradientColor1, colorOptions);
+        initAdapter(gradientColor2, colorOptions);
+        initAdapter(orientation, orientArr);
+        initAdapter(gravity, gravityArr);
+        initAdapter(animation, animArr);
+    }
+
+    private void initAdapter(AutoCompleteTextView autoCompleteTextView, String[] arr) {
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.dropdown_item, arr);
+        autoCompleteTextView.setAdapter(adapter);
     }
 
     private void findViewsCustom(View customView) {
@@ -198,9 +142,9 @@ public class MainActivity extends AppCompatActivity {
         orientation = customView.findViewById(R.id.orientation);
         gravity = customView.findViewById(R.id.gravity);
         animation = customView.findViewById(R.id.animation);
-        focuseCheckBox = customView.findViewById(R.id.focuseCheckBox);
         confirmButton = customView.findViewById(R.id.confirmButton);
     }
+
 
     private void findViews() {
         main_BTN_click = findViewById(R.id.main_BTN_click);
@@ -212,7 +156,6 @@ public class MainActivity extends AppCompatActivity {
         String cornerRadiusStr = cornerRadius.getText().toString().trim();
         String borderWidthStr = borderWidth.getText().toString().trim();
 
-        boolean isFocusable = focuseCheckBox.isChecked();
 
         try {
             if (!widthStr.isEmpty()) {
@@ -230,30 +173,38 @@ public class MainActivity extends AppCompatActivity {
                 customPopup.setCornerRadius(radius);
             }
 
-            if (!oneColorStr.isEmpty() && !oneColorStr.equals("NONE")) {
+            if (oneColorStr != null && !oneColorStr.isEmpty() && !"NONE".equals(oneColorStr)) {
                 int colorId = getColorIdFromString(oneColorStr);
                 if (colorId != -1) {
                     customPopup.setBackgroundOneColor(colorId);
                 }
             }
 
-            if (!gradientColor1Str.isEmpty() && !gradientColor2Str.isEmpty()) {
+            if (gradientColor1Str != null && !gradientColor1Str.isEmpty() && !"NONE".equals(gradientColor1Str)
+                    && gradientColor2Str != null && !gradientColor2Str.isEmpty() && !"NONE".equals(gradientColor2Str)) {
                 int startColorId = getColorIdFromString(gradientColor1Str);
                 int endColorId = getColorIdFromString(gradientColor2Str);
                 GradientDrawable.Orientation gradientOrientation = getGradientOrientation(orientationStr);
-
                 if (startColorId != -1 && endColorId != -1) {
                     customPopup.setGradientBackgroundColor(startColorId, endColorId, gradientOrientation);
                 }
             }
 
-            if (!borderWidthStr.isEmpty() && borderColorId != -1) {
+            if (borderWidthStr != null && !borderWidthStr.isEmpty() &&
+                    borderColorStr != null && !borderColorStr.isEmpty()) {
                 float borderWidth = Float.parseFloat(borderWidthStr);
-                customPopup.setBorder(borderColorId, borderWidth);
+                int colorID = getColorIdFromString(borderColorStr);
+                if (colorID != -1) {
+                    customPopup.setBorder(colorID, borderWidth);
+                }
             }
 
-            customPopup.setFocusable(isFocusable);
-            customPopup.update();
+            if (gravityStr == null) {
+                gravityStr = "center";
+            }
+            if (animationStr == null) {
+                animationStr = "scale";
+            }
 
             customPopup.dismissPopup();
             customPopup.show(customView, gravityStr, animationStr);
@@ -311,30 +262,6 @@ public class MainActivity extends AppCompatActivity {
                 return GradientDrawable.Orientation.RIGHT_LEFT;
             default:
                 return GradientDrawable.Orientation.LEFT_RIGHT;
-        }
-    }
-
-    private int getAnimationResource(String animationStr) {
-        switch (animationStr.toLowerCase()) {
-            case "BOTTOM":
-                return R.style.PopupAnimation_Bottom;
-            case "TOP":
-                return R.style.PopupAnimation_Top;
-            case "LEFT":
-                return R.style.PopupAnimation_Left;
-            case "RIGHT":
-                return R.style.PopupAnimation_Right;
-            case "ROTATE":
-                return R.style.PopupAnimation_Rotate;
-            case "ROTATE_SCALE":
-            case "SCALE_ROTATE":
-                return R.style.PopupAnimation_Rotate_Scale;
-            case "BOUNCE":
-                return R.style.PopupAnimation_Bounce;
-            case "SCALE":
-            default:
-                return R.style.PopupAnimation_Scale;
-
         }
     }
 }

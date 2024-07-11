@@ -16,10 +16,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven ( "https://jitpack.io" )
     }
 }
 
 rootProject.name = "24B-10242-HW-2"
 include(":app")
- 
+include(":popUpLibrary")
