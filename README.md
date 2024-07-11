@@ -63,7 +63,7 @@ In this example, customView contains the layout that the developer using the lib
 
 ### Important Note
 
-❗ For changing the design of corners or borders with a solid background, you must also set a border, even if the border width is 0. When using a gradient background, there are no such restrictions. ❗
+❗ For changing the design of corners or borders, you must select a background color first. ❗
 
 ### Gradient Orientation
 using GradientDrawable.Orientation.  
@@ -103,23 +103,23 @@ You can position the pop-up using the following gravity options: (upperCase and 
 
  <img src="https://github.com/user-attachments/assets/de880a4c-5111-4aeb-9a03-f9f194d806fe" alt="Regular Pop-Up" height="250">
 
-### Pop-Up with Changed Width and Height
+### Pop-Up with Width and Height
 
  <img src="https://github.com/user-attachments/assets/7a6f8ba0-436a-4f2e-8e68-54392db36a59" alt="Regular Pop-Up" height="250">
 
-### Pop-Up with Changed Gradient Background
+### Pop-Up with Gradient Background
 
 <img src="https://github.com/user-attachments/assets/1a2374f9-90df-445a-b2fc-035ec018f3e6" alt="Regular Pop-Up" height="250">
 
-### Pop-Up with Changed Rounded Corners
+### Pop-Up with Rounded Corners
 
 <img src="https://github.com/user-attachments/assets/01c82432-3af4-4bce-94ae-a97f45f01d31" alt="Regular Pop-Up" height="250">
 
-### Pop-Up with Changed Border
+### Pop-Up with Border
 
 <img src="https://github.com/user-attachments/assets/dd455801-da05-4b65-a8df-cffff8d0bd56" alt="Regular Pop-Up" height="250">
 
-### Pop-Up with Changed Animation and Position
+### Pop-Up with Animation and Position
 
 https://github.com/user-attachments/assets/33b8bda1-2cce-46b2-8370-ca69682e0547
 
