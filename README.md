@@ -101,7 +101,7 @@ You can position the pop-up using the following gravity options: (upperCase and 
 ## Examples
  ### Regular Pop-Up
 
- <img src="https://github.com/user-attachments/assets/de880a4c-5111-4aeb-9a03-f9f194d806fe" alt="Regular Pop-Up" height="250>
+ <img src="https://github.com/user-attachments/assets/de880a4c-5111-4aeb-9a03-f9f194d806fe" alt="Regular Pop-Up" height="250">
 
 ### Pop-Up with Changed Width and Height
 
