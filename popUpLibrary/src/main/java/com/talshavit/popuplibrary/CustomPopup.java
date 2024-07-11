@@ -183,9 +183,10 @@ public class CustomPopup extends PopupWindow {
             case "BOUNCE":
                 return R.style.PopupAnimation_Bounce;
             case "SCALE":
-            default:
                 return R.style.PopupAnimation_Scale;
-
+            case "NONE":
+            default:
+                return -1;
         }
     }
 

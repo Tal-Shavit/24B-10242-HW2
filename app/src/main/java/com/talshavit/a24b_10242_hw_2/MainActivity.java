@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private String[] colorOptions = {"BLACK", "WHITE", "BLUE", "ORANGE", "PINK", "PURPLE", "GREEN", "RED", "YELLOW", "LIGHTBLUE", "LIGHTORANGE"};
     private String[] orientArr = {"TL_BR", "TL_BL", "BL_TR", "BR_TL", "TOP_BOTTOM", "BOTTOM_TOP", "LEFT_RIGHT", "RIGHT_LEFT"};
     private String[] gravityArr = {"TOP", "BOTTOM", "CENTER"};
-    private String[] animArr = {"TOP", "BOTTOM", "LEFT", "RIGHT", "ROTATE", "ROTATE_SCALE", "SCALE_ROTATE", "BOUNCE", "SCALE"};
+    private String[] animArr = {"TOP", "BOTTOM", "LEFT", "RIGHT", "ROTATE", "ROTATE_SCALE", "SCALE_ROTATE", "BOUNCE", "SCALE", "NONE"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
