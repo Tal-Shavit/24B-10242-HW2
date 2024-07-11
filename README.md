@@ -61,6 +61,10 @@ customPopup.show(customView);
 
 In this example, customView contains the layout that the developer using the library has prepared. They can then apply the various customization functions to it as needed. For gradient backgrounds, use GradientDrawable.Orientation to specify the direction of the gradient. Use the provided gravity and animation options to position and animate the pop-up.
 
+### Important Note
+
+❗ For changing the design of corners or borders, you must select a background first. ❗
+
 ### Gradient Orientation
 using GradientDrawable.Orientation.  
 You can choose from the following types:
@@ -123,7 +127,11 @@ https://github.com/user-attachments/assets/35b34850-cb3b-42c5-97d6-6a982c1062ff
 
 https://github.com/user-attachments/assets/e41c02c4-a143-4ed1-8d7e-0d5b7aa21574
 
-https://github.com/user-attachments/assets/a71266db-5047-4bdf-acde-ade6464ebb90
+### Demonstration Video
+
+Here is a demonstration video showing how the features work within the pop-up itself, where the user inputs the details they want to change and the pop-up updates accordingly.  
+
+https://github.com/user-attachments/assets/67e0f365-453c-42dc-a7bf-f5119f52540f
 
 
 
