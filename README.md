@@ -97,27 +97,34 @@ You can position the pop-up using the following gravity options: (upperCase and 
 ## Examples
  ### Regular Pop-Up
 
+ <img src="https://github.com/user-attachments/assets/de880a4c-5111-4aeb-9a03-f9f194d806fe" alt="Regular Pop-Up" height="250>
 
 ### Pop-Up with Changed Width and Height
 
+ <img src="https://github.com/user-attachments/assets/7a6f8ba0-436a-4f2e-8e68-54392db36a59" alt="Regular Pop-Up" height="250">
 
-### Pop-Up with Solid Color Background
+### Pop-Up with Changed Gradient Background
 
+<img src="https://github.com/user-attachments/assets/1a2374f9-90df-445a-b2fc-035ec018f3e6" alt="Regular Pop-Up" height="250">
 
-### Pop-Up with Gradient Background
+### Pop-Up with Changed Rounded Corners
 
+<img src="https://github.com/user-attachments/assets/01c82432-3af4-4bce-94ae-a97f45f01d31" alt="Regular Pop-Up" height="250">
 
-### Pop-Up with Rounded Corners
+### Pop-Up with Changed Border
 
+<img src="https://github.com/user-attachments/assets/dd455801-da05-4b65-a8df-cffff8d0bd56" alt="Regular Pop-Up" height="250">
 
-### Pop-Up with Border
-
-
-### Pop-Up with Animation and Position
+### Pop-Up with Changed Animation and Position
 
 https://github.com/user-attachments/assets/33b8bda1-2cce-46b2-8370-ca69682e0547
 
+https://github.com/user-attachments/assets/35b34850-cb3b-42c5-97d6-6a982c1062ff
+
+https://github.com/user-attachments/assets/e41c02c4-a143-4ed1-8d7e-0d5b7aa21574
+
 https://github.com/user-attachments/assets/a71266db-5047-4bdf-acde-ade6464ebb90
+
 
 
 ## implementation
