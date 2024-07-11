@@ -17,15 +17,17 @@ import com.talshavit.popuplibrary.CustomPopup;
 public class MainActivity extends AppCompatActivity {
 
     private MaterialButton main_BTN_click, confirmButton;
-    private CustomPopup customPopup;
     private TextInputEditText width, height, cornerRadius, borderWidth;
     private AutoCompleteTextView colorBorder, oneColor, gradientColor1, gradientColor2, orientation, gravity, animation;
     private String oneColorStr, borderColorStr, gradientColor1Str, gradientColor2Str, orientationStr, gravityStr, animationStr;
-    private View customView;
     private String[] colorOptions = {"BLACK", "WHITE", "BLUE", "ORANGE", "PINK", "PURPLE", "GREEN", "RED", "YELLOW", "LIGHTBLUE", "LIGHTORANGE"};
     private String[] orientArr = {"TL_BR", "TL_BL", "BL_TR", "BR_TL", "TOP_BOTTOM", "BOTTOM_TOP", "LEFT_RIGHT", "RIGHT_LEFT"};
     private String[] gravityArr = {"TOP", "BOTTOM", "CENTER"};
     private String[] animArr = {"TOP", "BOTTOM", "LEFT", "RIGHT", "ROTATE", "ROTATE_SCALE", "SCALE_ROTATE", "BOUNCE", "SCALE", "NONE"};
+
+
+    private CustomPopup customPopup;
+    private View customView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,10 +50,14 @@ public class MainActivity extends AppCompatActivity {
             onConfirmButton();
 
             customPopup.setCustomView(customView);
-            //customPopup.setBackgroundOneColor(R.color.orange);
+            //customPopup.changeWidth(1000);
+            //customPopup.changeHeight(1500);
+            //customPopup.setPopUpZise(1000,1500);
             //customPopup.setCornerRadius(90);
             //customPopup.setBorder(R.color.black, 4);
+            //customPopup.setBackgroundOneColor(R.color.orange);
             //customPopup.setGradientBackgroundColor(R.color.lightOrange, R.color.lightBlue, GradientDrawable.Orientation.BOTTOM_TOP);
+            //customPopup.show(customView, "CENTER", "ROTATE_SCATE");
             customPopup.show(view, "center", "scale");
 
         });
