@@ -133,6 +133,3 @@ Here is a demonstration video showing how the features work within the pop-up it
 
 https://github.com/user-attachments/assets/67e0f365-453c-42dc-a7bf-f5119f52540f
 
-
-
-## implementation
