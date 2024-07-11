@@ -88,7 +88,7 @@ public class CustomPopup extends PopupWindow {
         }
     }
 
-    public void setPopUpZise(int width, int height) {
+    public void setPopUpSize(int width, int height) {
         changeWidth(width);
         changeHeight(height);
     }

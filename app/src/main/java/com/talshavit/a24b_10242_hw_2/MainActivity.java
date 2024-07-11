@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             customPopup.setCustomView(customView);
             //customPopup.changeWidth(1000);
             //customPopup.changeHeight(1500);
-            //customPopup.setPopUpZise(1000,1500);
+            //customPopup.setPopUpSize(1000,1500);
             //customPopup.setCornerRadius(90);
             //customPopup.setBorder(R.color.black, 4);
             //customPopup.setBackgroundOneColor(R.color.orange);
