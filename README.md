@@ -91,7 +91,7 @@ You can choose from the following animation types: (upperCase and LowerCase)
 **SCALE:** Entrance from small to large to the chosen position.  
 **NONE:** Entrance to the chosen position without animation.  
 
-### position
+### Position
 You can position the pop-up using the following gravity options: (upperCase and LowerCase)  
 
 **TOP:** Entrance from the top to the chosen position.  
