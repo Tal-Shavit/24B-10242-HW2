@@ -26,7 +26,33 @@ Welcome to the Custom Pop-Up Library! This library allows developers to easily c
 ### 7. Ease of Use
 - **General Design File:** Simply provide a design file with the elements you want in the pop-up, and the library takes care of the rest.
 
-  ## Usage
+## Installation
+To include the Custom Pop-Up Library in your project, add the following configuration to your `build.gradle` file:  
+
+### Step 1: Add Maven Repository
+
+Add the following code to the `dependencyResolutionManagement` section in your project's `settings.gradle` file:
+
+```groovy
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+### Step 2: Add Dependency
+Add the library dependency to your app module's build.gradle file:
+``` gradle
+dependencies {
+    implementation 'com.github.Tal-Shavit:popuplibrary:Tag'
+}
+```
+Replace `Tag` with the specific version or commit tag you want to use from the repository.
+
+## Usage
  ``` java
 // Initialize the CustomPopup with the context
 CustomPopup customPopup = new CustomPopup(context);
